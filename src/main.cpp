@@ -26,23 +26,33 @@ SOFTWARE.
 #include "CDCatalog.hpp"
 
 void helper() {
-    std::cout<<"This is help";
+    std::cout << "usage: xml2html <XML file name> <HTML file name>"
+              << std::endl
+              << "This file is to convert the source XML file to the target HTML file."
+              << std::endl;
 }
 
 int main(int argc, char *argv[]) {
-    // std::cout << argc << std::endl;
     if(argc != 3) {
         helper();
         return 1;
     }
 
+    std::string xmlFileName(argv[1]);
+    std::string htmlFileName(argv[2]);
+
+    if(xmlFileName == htmlFileName) {
+        std::cout << "The XML file name can not be the same as the HTML file name." << std::endl;
+        return 2;
+    }
+
     CDCatalog catalog;
     if (!catalog.load(argv[1])) {
-        return 2;
+        return 3;
     } 
 
     if (!catalog.toHTMLFile(argv[2])) {
-        return 3;
+        return 4;
     }
 
     return 0;
