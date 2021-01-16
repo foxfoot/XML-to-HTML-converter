@@ -28,13 +28,32 @@ SOFTWARE.
 #include <string>
 
 namespace CONSTANTS {
+    const std::string STR_CATALOG = "CATALOG";
+
     const std::string STR_TITLE = "TITLE";
     const std::string STR_ARTIST = "ARTIST";
     const std::string STR_COUNTRY = "COUNTRY";
     const std::string STR_COMPANY = "COMPANY";
     const std::string STR_PRICE = "PRICE";
     const std::string STR_YEAR = "YEAR";
-    const std::string STR_CATALOG = "CATALOG";
+
+    const std::string htmlHead = 
+        "<!DOCTYPE html>"
+        "<html>"
+            "<head>"
+                "<style>"
+                    "table, th, td { border: 1px solid black;}"
+                "</style>"
+            "</head>"
+            "<body>"
+                "<h2>"+ STR_CATALOG + "</h2>"
+                "<p> CD </p>"
+                "<table style=\"width:100%\">";
+
+    const std::string htmlEnd = 
+                "</table>"
+            "</body>"
+        "</html>";
 };
 
 #endif //CONSTANTS_HPP_

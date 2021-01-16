@@ -23,8 +23,10 @@ SOFTWARE.
 */
 
 #include "CD.hpp"
+#include "constants.hpp"
 
 #include <iostream>
+#include <sstream>
 
 void CD::setTitle(const std::string& tlt) {
     title = tlt;
@@ -48,4 +50,32 @@ void CD::setPrice(const std::string&  prc) {
 
 void CD::setYear(const std::string&  yr) {
     year = yr;
+}
+
+std::string CD::toHTMLTableHead() {
+    std::stringstream ss;
+    ss<< "<tr>"
+        << "<td>" << CONSTANTS::STR_TITLE << "</td>\n"
+        << "<td>" << CONSTANTS::STR_ARTIST << "</td>\n"
+        << "<td>" << CONSTANTS::STR_COUNTRY << "</td>\n"
+        << "<td>" << CONSTANTS::STR_COMPANY << "</td>\n"
+        << "<td>" << CONSTANTS::STR_PRICE << "</td>\n"
+        << "<td>" << CONSTANTS::STR_YEAR << "</td>\n"
+        <<"</tr>\n";
+
+    return ss.str();
+}
+
+std::string CD::toHTMLTableRow() const {
+    std::stringstream ss;
+    ss<< "<tr>"
+        << "<td>" << title << "</td>\n"
+        << "<td>" << artist << "</td>\n"
+        << "<td>" << country << "</td>\n"
+        << "<td>" << company << "</td>\n"
+        << "<td>" << price << "</td>\n"
+        << "<td>" << year << "</td>\n"
+        <<"</tr>\n";
+
+    return ss.str();
 }

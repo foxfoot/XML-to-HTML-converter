@@ -37,6 +37,7 @@ public:
     void setPrice(const std::string&  prc);
     void setYear(const std::string&  yr);
 
+    static std::string toHTMLTableHead();
     std::string toHTMLTableRow() const;
 private:
     std::string title;

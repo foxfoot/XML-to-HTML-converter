@@ -31,6 +31,7 @@
 *.out
 *.app
 xml2html
+*.html
 
 # Source code and document of the pugi library
 pugixml-1.11/

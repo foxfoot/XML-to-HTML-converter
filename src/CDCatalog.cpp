@@ -25,7 +25,9 @@ SOFTWARE.
 #include "CDCatalog.hpp"
 #include "constants.hpp"
 #include "./lib/pugixml.hpp"
+
 #include <iostream>
+#include <fstream>
 
 bool CDCatalog::load(const std::string& fn){
     pugi::xml_document xmlDoc;
@@ -78,3 +80,24 @@ bool CDCatalog::load(const std::string& fn){
 }
 
 
+bool CDCatalog::toHTMLFile(const std::string& fn) const {
+    std::ofstream ofs(fn);
+    if(!ofs.is_open())
+	{
+        std::cout << "Error: Cannot open file: " << fn << std::endl;
+        return false;
+    }
+
+    ofs << CONSTANTS::htmlHead
+        << CD::toHTMLTableHead();
+
+    for(const auto& cd : catalogVec) {
+        ofs << cd.toHTMLTableRow();
+    }
+
+    ofs << CONSTANTS::htmlEnd;
+
+    ofs.close();
+
+    return true;
+}

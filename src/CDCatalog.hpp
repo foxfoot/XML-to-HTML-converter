@@ -40,7 +40,7 @@ public:
     // @param fn: - std::string the file name of the xml file including the path
     // @return: true, if load successfully; false, if load failed.
     bool load(const std::string& fn);
-    bool toHTMLFile(const std::string fn) const;
+    bool toHTMLFile(const std::string& fn) const;
 private:
     std::string fileName;
 

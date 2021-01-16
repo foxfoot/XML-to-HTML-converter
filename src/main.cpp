@@ -31,13 +31,19 @@ void helper() {
 
 int main(int argc, char *argv[]) {
     // std::cout << argc << std::endl;
-    // if(argc != 3) {
-    //     helper();
-    //     return 1;
-    // }
+    if(argc != 3) {
+        helper();
+        return 1;
+    }
 
     CDCatalog catalog;
-    catalog.load(argv[1]);
+    if (!catalog.load(argv[1])) {
+        return 2;
+    } 
+
+    if (!catalog.toHTMLFile(argv[2])) {
+        return 3;
+    }
 
     return 0;
 }
