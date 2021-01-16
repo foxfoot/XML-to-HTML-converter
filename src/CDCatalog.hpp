@@ -42,8 +42,6 @@ public:
     bool load(const std::string& fn);
     bool toHTMLFile(const std::string& fn) const;
 private:
-    std::string fileName;
-
     std::vector<CD> catalogVec;
 };
 

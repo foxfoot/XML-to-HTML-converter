@@ -35,7 +35,7 @@ bool CDCatalog::load(const std::string& fn){
     pugi::xml_parse_result xmlParseResult = xmlDoc.load_file(fn.c_str());
 
     if(!xmlParseResult) {
-        std::cout << "Cannot load XML file: " << fn <<std::endl;
+        std::cout << "Error: Cannot load XML file: " << fn <<std::endl;
         return false;
     }
 
