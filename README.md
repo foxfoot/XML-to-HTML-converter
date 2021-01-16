@@ -61,3 +61,11 @@ To choose third party libraries, the following should be considered first:
 * Bug fix and upgrade: Make sure the author is still maintaining it.
 * Document or Guide
 * Stability: The library should run stable without any major issue.
+
+## Authors
+
+foxfoot2002@hotmail.com
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
