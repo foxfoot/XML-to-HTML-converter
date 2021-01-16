@@ -36,11 +36,16 @@ class CDCatalog
 {
 public:
 
-    // load the XML file
-    // @param fn: - std::string the file name of the xml file including the path
+    // This function loads the XML file
+    // @param fn: - std::string the file name of the XML file including the path
     // @return: true, if load successfully; false, if load failed.
     bool load(const std::string& fn);
+
+    // This function writes to the HTML file in table format
+    // @param fn: - std::string the file name of the HTML file including the path
+    // @return: true, if write successfully; false, if write failed.
     bool toHTMLFile(const std::string& fn) const;
+
 private:
     std::vector<CD> catalogVec;
 };

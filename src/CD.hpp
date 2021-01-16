@@ -44,8 +44,8 @@ private:
     std::string artist;
     std::string country;
     std::string company;
-    std::string price; //Do not over-engineering. Keep string type. No need to use float/double now.
-    std::string year; //Do not over-engineering. Keep string type. No need to use int now.
+    std::string price; //Do not over-engineering. Keep string type. If needed, change to float/double.
+    std::string year; //Do not over-engineering. Keep string type. If needed, change to float/double.
 };
 
 #endif //CD_HPP_
