@@ -30,7 +30,6 @@
 *.exe
 *.out
 *.app
-*.html
 
 # Source code and document of the pugi library
 pugixml-1.11/

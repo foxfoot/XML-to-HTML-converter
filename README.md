@@ -1,16 +1,16 @@
 # XML to HTML converter
-xml2html is a tool running on Linux. It converts an XML file to HTML file in a table format. The output file is like this:
+xml2html is a tool running on Linux. It converts an XML file to HTML file in a table format. See the example of the `output.html`. In browser the output file looks like this:
 ![Image of CD Catalog HTML table](./Result.png)
 
 ## Versioning
 0.1
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.  
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See `Build` and `Run` for usage.  
 
 ### Prerequisites
 
-GCC which supports C++ 17.
+GCC on Linux which supports C++ 17.
 
 ### Build
 ```
@@ -56,7 +56,8 @@ If all test cases passed, the result should be like this:
 * [Catch2](https://github.com/catchorg/Catch2/blob/v2.x/docs/tutorial.md) - a c++ unit test framework. It is in test/lib/
 
 To choose third party libraries, the following should be considered first:
-
-* Popular ones with document or guide
-* Have maintenance.
-* License (MIT, Apache and ect)
+* License (MIT, Apache and ect): No one want to deal with legal issues.
+* Good Reputation and Reviews
+* Bug fix and upgrade: Make sure the author is still maintaining it.
+* Document or Guide
+* Stability: The library should run stable without any major issue.
