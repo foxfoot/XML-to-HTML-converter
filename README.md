@@ -49,7 +49,7 @@ cd test/features
 If all test cases passed, the result should be like this:
 ```
 =================================================================
-4 test case(s) passed.  0 test case(s) failed.
+5 test case(s) passed.  0 test case(s) failed.
 ```
 ## Built With
 * [pugixml](https://pugixml.org/docs/quickstart.html) - n open source library which can parse the input xml file. It consists of a DOM-like interface. It is in /src/lib/

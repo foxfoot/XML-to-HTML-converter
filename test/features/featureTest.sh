@@ -58,5 +58,18 @@ else
     ((passedNum = passedNum + 1))
 fi
 
+# Test case 5: output has the same name as the input xml file
+../../xml2html ./same.xml ./same.xml
+
+retVal=$?
+
+if [ $retVal -ne 2 ]; then
+    echo "Test case 5 failed. Return value "$retVal
+    ((failedNum = failedNum + 1))
+else
+    echo "Test case 5 passed."
+    ((passedNum = passedNum + 1))
+fi
+
 echo "================================================================="
 echo $passedNum" test case(s) passed. " $failedNum" test case(s) failed."
